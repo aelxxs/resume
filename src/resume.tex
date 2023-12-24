@@ -1,0 +1,149 @@
+%------------------------
+% Author  : Alexis Vielma
+% License : MIT
+%------------------------
+
+\documentclass[letter,11pt]{article}
+\pagestyle{empty}
+
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[left=0.35in,right=0.35in,bottom=0.25in,top=0.25in]{geometry}
+\usepackage{charter}
+
+\input{glyphtounicode}
+
+\pdfgentounicode=1
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\bfseries\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+\newcommand{\resumeItem}[1]{
+	\item \small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[3]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1}, {\small #2} & \textbf{\small #3} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.5cm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+%----------HEADING----------%
+\begin{center}
+    {\Huge Alexis Vielma} \\
+    \vspace{5pt}
+    \href{mailto:alexis@alexis.lol}{\underline{alexis@alexis.lol}} \hspace{10pt}
+    \href{https://alexis.lol/}{\underline{alexis.lol/}} \hspace{10pt}
+    \href{https://github.com/aelxxs/}{\underline{github.com/aelxxs/}}
+    \vspace{-10pt}
+\end{center}
+
+%----------EDUCATION----------%
+\section{Education}
+	\resumeSubHeadingListStart
+		\resumeSubheading{The University of Kansas}{B.Sc. Computer Science}{Expected May 2025}
+	\resumeSubHeadingListEnd
+
+%----------EXPERIENCE----------%
+\section{Experience}
+	\resumeSubHeadingListStart
+		\resumeSubheading{Technology Director}{KJHK 90.7 FM}{Mar 2023 -- Present}
+			\resumeItemListStart
+				\resumeItem{Led the UI and UX design, architecture, and development of a new mobile application, using React Native and TypeScript, resulting in a user-friendly and cross-platform solution that enhanced the station's digital presence}
+				\resumeItem{Developed a web dashboard that aggregates useful resources for on-air DJs such as weather information, currently playing song information, and easy access to internal logging software used by over 50 DJs}
+				\resumeItem{Installed and configured an RDS Encoder using TCP protocol in order to display real-time now-playing metadata on RDS enabled radios, improving the experience of over 10,000 listeners city wide}
+			\resumeItemListEnd
+		\resumeSubheading{Founding Engineer}{Lightbulb.ai}{May 2023 -- Present}
+			\resumeItemListStart
+				\resumeItem{Successfully conceptualized, developed, and deployed an initial MVP of the web dashboard using Next.js, Tailwind CSS, and AWS, which was utilized as a demo showcase for potential clients}
+				\resumeItem{Architected an RESTful API ecosystem using Next.js and AWS to seamlessly interface with serverless functions and microservices, ensuring efficient communication and data flow}
+				\resumeItem{Conducted comprehensive research on serverless architecture, exploring potential benefits and implications for future product development and scalability}
+			\resumeItemListEnd
+		\resumeSubheading{DevOps Engineer Intern}{Major League Hacking (Meta/Facebook)}{May 2022 -- Aug 2022}
+			\resumeItemListStart
+				\resumeItem{Designed and developed an open-source personal portfolio website using Python, Flask, Jinja, MySQL, and Nginx. Following best practices and workflows}
+				\resumeItem{Automated testing and deployment workflows using CI/CD with GitHub Actions. Implemented system and container monitoring, alerting, and visualization using Prometheus and Grafana}
+				\resumeItem{Completed 12-weeks of structured curriculum-based learning covering core Production Engineering topics, supplemented with events and workshops hosted by industry experts}
+			\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%----------PROJECTS----------%
+\section{Projects}
+    \vspace{-5pt}
+	\resumeSubHeadingListStart
+		\resumeProjectHeading{\textbf{KJHK 90.7 FM App}, {TypeScript, React Native, Zetta RCS}}{Nominated for Best App -- IBS 2024}
+			\resumeItemListStart
+				\resumeItem{A cross-platform mobile application that allows KJHK 90.7 listeners to tune in from wherever they are}
+				\resumeItem{In charge of fullstack development -- including UI/UX design, React Native for app, and REST APIs to fetch metadata}
+			\resumeItemListEnd
+			\vspace{-15pt}
+		\resumeProjectHeading{\textbf{Braindex}, {TypeScript, React Native, AWS, Flask}}{}
+			\resumeItemListStart
+				\resumeItem{A mobile app built with React Native that uses AWS and a NLP to generate flashcards, and quizzes based off of notes}
+				\resumeItem{Handled the UI and UX design, mobile app development and integration with AWS Lambda functions to ingest data}
+			\resumeItemListEnd
+			\vspace{-15pt}
+		\resumeProjectHeading{\textbf{Mapsy}, {TypeScript, React, Firebase, Google Cloud}}{2nd Place Winner -- HackKU 2022}
+			\resumeItemListStart
+				\resumeItem{A website that utilizes local CCTV feeds to perform imagery and weather analysis, enabling real-time monitoring of road conditions for commuters}
+				\resumeItem{Led the frontend UI and UX development and integrated Google Maps Platform API to allow users to click and view feeds}
+			\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%----------SKILLS----------%
+\section{Skills}
+	\begin{itemize}[leftmargin=0.05in, label={}]
+		\small{\item{
+			\textbf{Languages}{: JavaScript, TypeScript, Python, C, C++, Haskell, Go, HTML, CSS} \\
+			\textbf{Frameworks}{: Node.js, React.js, React Native, Next.js, Svelte, Astro, Vue.js, Tailwind CSS} \\
+			\textbf{Platforms}{: Git, Amazon Web Services, Google Cloud, Vercel, Cloudflare}
+		}}
+	\end{itemize}
+\vspace{-15pt}
+
+%----------LEADERSHIP----------%
+\section{Leadership}
+	\resumeSubHeadingListStart
+		\resumeSubheading{KJHK 90.7 FM}{Cabinet Member}{May 2023 -- Present}
+			\resumeItemListStart
+				\resumeItem{Led an internal initiative to address technical challenges, enhance documentation for software and infrastructure}
+				\resumeItem{Conducted station-wide interviews, fostering team growth beyond technical duties at KJHK 90.7 FM}
+			\resumeItemListEnd
+		\resumeSubheading{Association for Computing Machinery}{Web Manager}{May 2023 -- Dec 2023}
+			\resumeItemListStart
+				\resumeItem{Executed regular website updates to ensure accurate and current data, maintaining the relevance of information}
+				\resumeItem{Started a website overhaul project aimed at enhancing user experience through modernizing the UI/UX design}
+			\resumeItemListEnd
+	\resumeSubHeadingListEnd
+\end{document}
