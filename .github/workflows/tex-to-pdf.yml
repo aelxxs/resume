@@ -1,0 +1,29 @@
+name: Generate PDF from LaTeX
+
+on:
+    push:
+        paths:
+            - "src/**/*.tex"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Setup LaTeX
+              uses: xu-cheng/latex-action@v2
+              with:
+                  root_file: src/resume.tex
+
+            - name: Generate PDF
+              run: |
+                  pdflatex src/resume.tex
+
+            - name: Upload PDF Artifact
+              uses: actions/upload-artifact@v2
+              with:
+                  name: generated-pdf
+                  path: |
+                      bin/resume.pdf
