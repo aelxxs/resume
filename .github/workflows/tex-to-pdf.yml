@@ -12,18 +12,13 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
 
-            - name: Setup LaTeX
+            - name: Compile LaTeX Resume
               uses: xu-cheng/latex-action@v2
               with:
                   root_file: src/resume.tex
 
-            - name: Generate PDF
-              run: |
-                  pdflatex src/resume.tex
-
             - name: Upload PDF Artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: generated-pdf
-                  path: |
-                      bin/resume.pdf
+                  name: PDF
+                  path: bin/resume.pdf
