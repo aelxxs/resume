@@ -21,7 +21,7 @@ jobs:
                   root_file: src/resume.tex
 
             - name: Move PDF to bin
-              run: mv -f src/resume.pdf bin/resume.pdf
+              run: mv -f resume.pdf bin/resume.pdf
 
             - name: Upload PDF Artifact
               uses: actions/upload-artifact@v2
