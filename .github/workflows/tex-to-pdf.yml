@@ -21,6 +21,7 @@ jobs:
                   root_file: src/resume.tex
 
             - name: Move PDF to bin
+              # output is in the root directory
               run: mv -f resume.pdf bin/resume.pdf
 
             - name: Upload PDF Artifact
@@ -33,6 +34,7 @@ jobs:
               uses: softprops/action-gh-release@v1
               with:
                   files: bin/resume.pdf
+                  tag_name: Resume
 
             - name: Commit PDF
               run: |
