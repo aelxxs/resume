@@ -38,6 +38,7 @@ jobs:
 
             - name: Commit PDF
               run: |
+                  git pull
                   git config --local user.email ""
                   git config --local user.name "GitHub Action"
                   git add bin/resume.pdf
