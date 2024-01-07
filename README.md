@@ -44,9 +44,9 @@ The CI script is located in `.github/workflows/tex-to-pdf.yml` or you can view i
 
 Don't. This is my resumé, but if you want to use it as a template for your own resumé, feel free to fork it and make changes to your own copy.
 
-If you find a typo or something, feel free to open an issue or submit a pull request.
+If you find a typo or formatting issue, feel free to open an issue or submit a pull request.
 
-Otherwise, if you have any suggestions for improvements, feel free to open an issue or submit a pull request. I'm always looking for ways to improve my resumé!
+Otherwise, if you have any suggestions for improvements, open an issue or submit a pull request. I'm always looking for ways to improve my resumé!
 
 ### Acknowledgements
 
