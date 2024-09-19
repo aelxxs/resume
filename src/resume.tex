@@ -1,6 +1,6 @@
-%------------------------
-% Author  : Alexis Vielma
-%------------------------
+%------------------------%
+% Author : Alexis Vielma %
+%------------------------%
 
 \documentclass[letter,11pt]{article}
 \pagestyle{empty}
@@ -9,7 +9,8 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage[left=0.35in,right=0.35in,bottom=0.35in,top=0.35in]{geometry}
+\usepackage[margin=0.45in]{geometry}
+
 \usepackage{charter}
 
 \input{glyphtounicode}
@@ -19,8 +20,8 @@
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-	\vspace{-4pt}\scshape\raggedright\bfseries\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+	\vspace{-2pt}\scshape\raggedright\bfseries\large
+}{}{0em}{}[\vspace{2pt}\titlerule \vspace{-3pt}]
 
 \newcommand{\resumeItem}[1]{
 	\item \small{{#1 \vspace{-2pt}}}
@@ -56,42 +57,53 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
+
 %----------HEADING----------%
 \begin{center}
-    {\huge Alexis Vielma} \\
-    \vspace{5pt}
-    \href{mailto:alexis@alexis.lol}{\underline{alexis@alexis.lol}}
-	\hspace{15pt}
-    \href{https://alexis.lol/}{\underline{alexis.lol/}}
-    \hspace{15pt}
-    \href{https://github.com/aelxxs/}{\underline{github.com/aelxxs/}}
-    \vspace{-5pt}
+    {\huge \textbf{Alexis Vielma}} \\
+    \vspace{10pt}
+    \href{mailto:alexis@alexis.lol}{alexis@alexis.lol}
+	\hspace{7.5pt}|\hspace{7.5pt}
+    \href{https://github.com/aelxxs/}{github.com/aelxxs}
+	\hspace{7.5pt}|\hspace{7.5pt}
+    \href{https://linkedin.com/in/aelxxs/}{linkedin.com/in/aelxxs}
 \end{center}
+\vspace{-15pt}
 
 %----------EDUCATION----------%
 \section{Education}
 	\resumeSubHeadingListStart
-		\resumeSubheading{The University of Kansas}{B.Sc. Computer Science}{Expected May 2025}
+		\resumeSubheading{The University of Kansas}{Bachelor of Science (B.Sc.) in Computer Science}{Expected May 2025}
+        	\resumeItemListStart
+                \resumeItem{\textbf{Relevant Coursework}{: Data Structures \& Algorithms, Operating Systems, Linear Algebra, Calculus}}
+		\resumeItemListEnd
 	\resumeSubHeadingListEnd
+\vspace{-15pt}
 
 %----------EXPERIENCE----------%
 \section{Experience}
 	\resumeSubHeadingListStart
-		\resumeSubheading{Technology Director}{KJHK 90.7 FM}{Mar 2023 -- Present}
+		\resumeSubheading{Technology Director}{KJHK 90.7 FM at The University of Kansas}{Mar 2023 -- Present}
 			\resumeItemListStart
-				\resumeItem{Led the UI and UX design, architecture, and development of a new mobile application, using React Native and TypeScript, resulting in a user-friendly and cross-platform app that enhanced the station's digital presence with over 8,000 downloads}
-				\resumeItem{Developed a web dashboard that aggregates useful resources for on-air DJs such as weather information, currently playing song information, administrative announcements, and easy access to internal logging software used by over 50 DJs}
-				\resumeItem{Installed and configured an RDS Encoder using Transmission Control Protocol (TCP) in order to display real-time now-playing metadata on RDS enabled radios, improving the experience of over 10,000 listeners city wide}
+				\resumeItem{Led the UI and UX design, architecture, and development of a new mobile application, using React Native and TypeScript, resulting in a user-friendly and cross-platform app that enhanced the station's digital presence with 1000+ downloads}
+    			\resumeItem{Installed and configured an RDS Encoder using Transmission Control Protocol (TCP) in order to display real-time now-playing metadata on RDS enabled radios, improving the experience of over 10,000 listeners city wide}
+				\resumeItem{Designed an API Gateway which integrates Zetta RCS Live Metadata Export in order to transmit data via WebSockets for use in multiple station applications such as the KJHK App, Now Playing Module, and RDS Encoder}
 			\resumeItemListEnd
-		\resumeSubheading{Founding Engineer}{Lightbulb.ai}{May 2023 -- Present}
+        \resumeSubheading{Front End Engineer Intern}{Amazon}{May 2024 -- Aug 2024}
+			\resumeItemListStart
+                \resumeItem{Redesigned and streamlined UX for an internal dashboard used by 5+ Product Managers and non-technical stakeholders, eliminating 95\% of manual engineer interventions and reducing operational overhead by 10+ hours per week}
+                \resumeItem{Spearheaded initiative to rewrite and refactor 10,000+ lines of legacy React code, improving load times by 40\% , reducing bug reports by 30\%, and increasing Jest Unit Test Coverage to 95\%, enhancing scalability and developer experience}
+				\resumeItem{Led adaptation of code formatters and linters across 5+ TypeScript packages, reducing code inconsistencies by 75\% and cutting code review time by 20\%, improving overall code quality,  team productivity, and raising the bar for the team}
+            \resumeItemListEnd
+		\resumeSubheading{Software Engineer}{Lightbulb.ai}{May 2023 -- Mar 2024}
 			\resumeItemListStart
 				\resumeItem{Orchestrated an extensive AWS Lambda ecosystem to automate the transcription, analysis, and grading of over 1000 hours of calls per week, automating and reducing the workload of clients by 90\%}
-				\resumeItem{Architected a RESTful API ecosystem using Next.js and AWS to seamlessly interface with serverless functions and microservices, ensuring efficient communication and data flow}
+				\resumeItem{Architected a RESTful API ecosystem using Next.js, AWS, and PostgreSQL to seamlessly interface with serverless functions and microservices, ensuring efficient communication and data flow}
 				\resumeItem{Directed and contributed to the full software development life cycle, including requirement gathering, design, coding, testing, deployment, and maintenance, following a rigorous adherence to agile methodologies}
 			\resumeItemListEnd
-		\resumeSubheading{DevOps Engineer Intern}{Major League Hacking (Meta/Facebook)}{May 2022 -- Aug 2022}
+		\resumeSubheading{DevOps Engineer Fellow}{Meta/Facebook via Major League Hacking}{May 2022 -- Aug 2022}
 			\resumeItemListStart
-				\resumeItem{Designed and developed an open-source personal portfolio website using Python, Flask, Jinja, MySQL, and Nginx. Following best practices and workflows}
+				\resumeItem{Designed and developed an open-source personal portfolio website using Python, Flask, Jinja, MySQL, and Nginx, Following best practices and workflows}
 				\resumeItem{Automated testing and deployment workflows using CI/CD with GitHub Actions. Implemented system and container monitoring, alerting, and visualization using Prometheus and Grafana}
 				\resumeItem{Completed 12-weeks of structured curriculum-based learning covering core Production Engineering topics, supplemented with events and workshops hosted by industry experts}
 			\resumeItemListEnd
@@ -100,41 +112,27 @@
 
 %----------PROJECTS----------%
 \section{Projects}
-    \vspace{-5pt}
 	\resumeSubHeadingListStart
-		\resumeProjectHeading{\textbf{KJHK 90.7 FM App}, {TypeScript, React Native, Zetta RCS}}{Nominated for Best App -- IBS 2024}
+		\resumeSubheading{KJHK 90.7 FM App}{TypeScript, React Native, Zetta RCS}{Winner for Best Phone App -- IBS 2024}
 			\resumeItemListStart
 				\resumeItem{A cross-platform mobile application that allows KJHK 90.7 listeners to tune in from wherever they are}
 				\resumeItem{Oversaw entire software development life cycle, including gathering requirements, designing, coding, and deployment}
 			\resumeItemListEnd
-			\vspace{-15pt}
-		\resumeProjectHeading{\textbf{RiceBall}, {TypeScript, SvelteKit, Discord API, Docker, Redis}}{Used in over 4,500 Discord Servers}
+		\resumeSubheading{RiceBall}{TypeScript, SvelteKit, Discord API, Docker, Redis, MongoDB}{Used in over 4,500 Discord Servers}
 			\resumeItemListStart
 				\resumeItem{A multipurpose Discord Bot with Leveling, Reaction Roles, Economy, and dynamically generated user profile cards}
-				\resumeItem{Oversaw entire software development life cycle, including gathering requirements, designing, coding, and deployment}
-			\resumeItemListEnd
-			\vspace{-15pt}
-		\resumeProjectHeading{\textbf{Mapsy}, {TypeScript, React, Firebase, Google Cloud}}{2nd Place Winner -- HackKU 2022}
-			\resumeItemListStart
-				\resumeItem{A website that utilizes local CCTV feeds to perform imagery and weather analysis, enabling monitoring of road conditions}
-				\resumeItem{Led the frontend UI and UX development and integrated Google Maps Platform API to allow users to click and view feeds}
-			\resumeItemListEnd
-			\vspace{-15pt}
-		\resumeProjectHeading{\textbf{Braindex}, {TypeScript, React Native, AWS, Flask}}{}
-			\resumeItemListStart
-				\resumeItem{A mobile app built with React Native that uses AWS and a NLP to generate flashcards, and quizzes based off of notes}
-				\resumeItem{Handled the UI and UX design, mobile app development and integration with AWS Lambda functions to ingest data}
+				\resumeItem{Built for scale using Redis Message Brokers, Docker, and custom built command handling with Dependency Injection}
 			\resumeItemListEnd
 	\resumeSubHeadingListEnd
 \vspace{-15pt}
 
 %----------SKILLS----------%
 \section{Skills}
-	\begin{itemize}[leftmargin=0.05in, label={}]
+	\begin{itemize}[leftmargin=0.065in, label={}]
 		\small{\item{
-			\textbf{Languages}{: JavaScript, TypeScript, Python, C, C++, Haskell, Go, HTML, CSS} \\
-			\textbf{Frameworks}{: Node.js, React.js, React Native, Next.js, Svelte, Astro, Vue.js, Tailwind CSS} \\
-			\textbf{Platforms}{: Git, Amazon Web Services, Google Cloud, Vercel, Cloudflare}
+			\textbf{Languages}{: JavaScript, TypeScript, Python, Rust, C, C++, Haskell, Go, HTML, CSS, SQL} \\
+			\textbf{Frameworks \& Tools}{: Node.js, React.js, React Native, Next.js, Svelte, Astro, Vue.js, Tailwind CSS, Docker, Nginx, Jest} \\
+			\textbf{Platforms \& DevOps}{: Git, Amazon Web Services (CDK, DynamoDB, API Gateway), Google Cloud, Vercel, Cloudflare, Unit Testing, End-to-End Testing}
 		}}
 	\end{itemize}
 \vspace{-15pt}
@@ -144,13 +142,8 @@
 	\resumeSubHeadingListStart
 		\resumeSubheading{KJHK 90.7 FM}{Cabinet Member}{May 2023 -- Present}
 			\resumeItemListStart
-				\resumeItem{Led an internal initiative to address technical challenges, enhance documentation for software and infrastructure}
-				\resumeItem{Conducted station-wide interviews, fostering team growth beyond technical duties at KJHK 90.7 FM}
-			\resumeItemListEnd
-		\resumeSubheading{Association for Computing Machinery}{Web Manager}{May 2023 -- Dec 2023}
-			\resumeItemListStart
-				\resumeItem{Executed regular website updates to ensure accurate and current data, maintaining the relevance of information}
-				\resumeItem{Started a website overhaul project aimed at enhancing user experience through modernizing the UI and UX design}
+                \resumeItem{Delivered a keynote presentation on "Technology and Radio" to over 50 industry professionals at the Intercollegiate Broadcasting System (IBS) conference in NYC, enhancing KJHK's reputation as a technology leader in college radio}
+                \resumeItem{Developed and launched an award-winning mobile application for KJHK, which won "Best Mobile App" at IBS 2024}
 			\resumeItemListEnd
 	\resumeSubHeadingListEnd
 \end{document}
